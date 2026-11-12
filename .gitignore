@@ -1,0 +1,11 @@
+# Raw clinical data and downloaded archives
+/data/raw/
+# Transient Python files
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+# Exploratory outputs are not evidence until audited
+/results/*.tmp
