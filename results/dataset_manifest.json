@@ -1,0 +1,15 @@
+{
+  "data_source_page": "https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008",
+  "official_archive_url": "https://archive.ics.uci.edu/static/public/296/diabetes%2B130-us%2Bhospitals%2Bfor%2Byears%2B1999-2008.zip",
+  "source_doi": "10.24432/C5230J",
+  "source_license": "CC BY 4.0",
+  "acquisition": "downloaded-from-uci-archive",
+  "original_archive_sha256_if_downloaded": "f82ac129da2ddd2299391ff6fbae3a6a58b3edcf59ac9d7bd480c00fe453112a",
+  "csv_sha256": "0689e7ec031237dc63031b938805c48377748761a3b26acab621567afa24df97",
+  "csv_filename": "diabetic_data.csv",
+  "bytes": 19159383,
+  "audit_generated_utc": "2026-11-02T18:48:15.961804+00:00",
+  "python_version": "3.13.18",
+  "pandas_version": "2.2.3",
+  "raw_csv_not_committed": true
+}
