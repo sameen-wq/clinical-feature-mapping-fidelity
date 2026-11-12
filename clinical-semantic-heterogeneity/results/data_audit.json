@@ -1,0 +1,73 @@
+{
+  "n_encounters": 101766,
+  "n_unique_patients": 71518,
+  "n_patients_with_multiple_encounters": 16773,
+  "n_encounters_from_repeated_patients": 47021,
+  "n_duplicate_encounter_ids": 0,
+  "target_distribution": {
+    "<30": 11357,
+    ">30": 35545,
+    "NO": 54864
+  },
+  "binary_target_definition": "positive iff readmitted == '<30'",
+  "binary_positive_prevalence": 0.111599,
+  "numeric_features": {
+    "number_inpatient": {
+      "missing": 0,
+      "zero": 67630,
+      "nonzero": 34136,
+      "mean": 0.635566
+    },
+    "number_emergency": {
+      "missing": 0,
+      "zero": 90383,
+      "nonzero": 11383,
+      "mean": 0.197836
+    },
+    "time_in_hospital": {
+      "missing": 0,
+      "zero": 0,
+      "nonzero": 101766,
+      "mean": 4.395987
+    },
+    "num_medications": {
+      "missing": 0,
+      "zero": 0,
+      "nonzero": 101766,
+      "mean": 16.021844
+    },
+    "num_lab_procedures": {
+      "missing": 0,
+      "zero": 0,
+      "nonzero": 101766,
+      "mean": 43.095641
+    },
+    "num_procedures": {
+      "missing": 0,
+      "zero": 46652,
+      "nonzero": 55114,
+      "mean": 1.33973
+    },
+    "number_diagnoses": {
+      "missing": 0,
+      "zero": 0,
+      "nonzero": 101766,
+      "mean": 7.422607
+    },
+    "number_outpatient": {
+      "missing": 0,
+      "zero": 85027,
+      "nonzero": 16739,
+      "mean": 0.369357
+    }
+  },
+  "candidate_swap_audit": {
+    "feature_a": "number_inpatient",
+    "feature_b": "number_emergency",
+    "n_rows_both_observed": 101766,
+    "n_rows_values_differ": 36199,
+    "fraction_differ_among_observed": 0.355708
+  },
+  "matches_uci_published_101766_rows": true,
+  "caution": "Descriptive full-dataset audit only; do not tune on test outcomes."
+}

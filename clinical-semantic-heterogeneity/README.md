@@ -45,3 +45,18 @@ UCI dataset: Clore, J., Cios, K., DeShazo, J., & Strack, B. (2014). *Diabetes 13
 The records are historical, from multiple institutions but without institution IDs. The injected swap is an artificial, narrow mapping failure. It cannot establish FHIR/OMOP transformation fidelity or clinical generalizability. This repository is a supervised, exploratory portfolio project, not a clinical tool or peer-reviewed study. Analytical design/code has been developed with AI assistance; results and interpretations will be verified separately.
 
 See [`PROGRESS_LOG.md`](PROGRESS_LOG.md) for current verified status and [`data/README.md`](data/README.md) for source details.
+
+## Current checkpoint: Phase 1 reviewed, Phase 2 design validation pending
+
+The data-audit files in `results/` were produced using the actual UCI dataset and shared for review. The source CSV itself is **not** distributed with this repository. The audit established 101,766 encounters, 71,518 unique patients, and a 35.57% difference between the two intended swap fields. **These are descriptive statistics, not machine-learning performance.** See `PHASE1_REVIEW.md` and `PROGRESS_LOG.md`.
+
+To validate the patient-disjoint assignment and reversible mapping intervention before training any model:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest tests -q
+python scripts/01_inspect_dataset.py --download
+python scripts/02_prepare_design.py
+```
+
+The last command writes `results/design_audit.json` recording per-client, per-split patient and encounter counts, class prevalence, and the number of training rows affected by the injected swap. No model is trained. It verifies the CSV checksum against the audit's stored manifest. The eventual model will use a fixed canonical held-out test set.

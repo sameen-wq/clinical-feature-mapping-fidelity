@@ -24,3 +24,6 @@ Main evaluation population: a fixed, patient-disjoint, canonically represented t
 
 ## Quality gate
 Dataset schema and source integrity must pass before design is frozen or models are trained. Hypothesis can be unsupported; that is not failure of the project.
+
+## Phase 1 audit checkpoint (November 3, 2026)
+Real UCI audit supplied by researcher: 101,766 encounters; 71,518 patient IDs; 11,357 positive `<30` labels; field values differ in 36,199 encounters. Results indicate mapping feasibility only, not model effects. CSV SHA-256 stored in `results/dataset_manifest.json`. See `PHASE1_REVIEW.md`. Phase 2 is patient-group splitting and mapping equivalence tests, with no model training.
